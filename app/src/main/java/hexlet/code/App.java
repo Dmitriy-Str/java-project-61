@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class App {
         String[] menuItems = {
                 "1 - Greet",
                 "2 - Even",
+                "3 - Calc",
                 "0 - Exit"
         };
         for (String menu: menuItems) {
@@ -22,11 +24,10 @@ public class App {
         Map<String, Runnable> games = Map.of(
                 "1", Cli::main,
                 "2", () -> Engine.run(new Even()),
+                "3", () -> Engine.run(new Calc()),
                 "0", () -> System.out.println("Goodbye")
         );
-        games.getOrDefault(gameNumber, () -> {
-            throw new RuntimeException("Unknown choice: " + gameNumber);
-        }).run();
+        games.getOrDefault(gameNumber, () ->  System.out.println("Unknown choice: " + gameNumber)).run();
     }
 
     public static void main(String[] args) {
