@@ -41,8 +41,9 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         printMenu();
+        System.out.print("Your choice: ");
         String gameNumber = Engine.SCANNER.next();
-        System.out.println("Your choice: " + gameNumber + "\n");
+        System.out.println();
         processChoice(gameNumber);
     }
 }
