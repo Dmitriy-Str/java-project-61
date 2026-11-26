@@ -36,6 +36,6 @@ public class Progression implements Game {
             }
             question.append(i == hiddenIndex ? ".." : String.valueOf(progression[i]));
         }
-        return new String[]{question.toString(), String.valueOf(progression[hiddenIndex])};
+        return new String[] {question.toString(), String.valueOf(progression[hiddenIndex])};
     }
 }

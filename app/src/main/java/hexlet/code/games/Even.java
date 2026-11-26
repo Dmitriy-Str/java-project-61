@@ -14,6 +14,6 @@ public class Even implements Game {
     public String[] generateRound() {
         var randomNumber = RANDOM.nextInt(MAX_NUMBER);
         var answer = randomNumber % 2 == 0 ? "yes" : "no";
-        return new String[]{String.valueOf(randomNumber), answer};
+        return new String[] {String.valueOf(randomNumber), answer};
     }
 }
