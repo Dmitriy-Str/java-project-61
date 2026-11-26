@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class App {
                 "2 - Even",
                 "3 - Calc",
                 "4 - GCD",
+                "5 - Progression",
                 "0 - Exit"
         };
         for (String menu: menuItems) {
@@ -28,6 +30,7 @@ public class App {
                 "2", () -> Engine.run(new Even()),
                 "3", () -> Engine.run(new Calc()),
                 "4", () -> Engine.run(new Gcd()),
+                "5", () -> Engine.run(new Progression()),
                 "0", () -> System.out.println("Goodbye")
                 );
         games.getOrDefault(gameNumber, () ->  System.out.println("Unknown choice: " + gameNumber)).run();
