@@ -8,7 +8,7 @@ public class Even implements Game {
     private static final Random RANDOM = new Random();
 
     public String getDescription() {
-        return "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     public String[] generateRound() {
