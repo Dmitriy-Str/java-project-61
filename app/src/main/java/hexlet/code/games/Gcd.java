@@ -22,6 +22,6 @@ public class Gcd implements Game {
         var operand1 = RANDOM.nextInt(MAX_NUMBER);
         var operand2 = RANDOM.nextInt(MAX_NUMBER);
         var answer = minDivisor(operand1, operand2);
-        return new String[]{String.valueOf(operand1 + " " + operand2), String.valueOf(answer)};
+        return new String[] {String.valueOf(operand1 + " " + operand2), String.valueOf(answer)};
     }
 }
